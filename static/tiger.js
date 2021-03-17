@@ -1,5 +1,6 @@
 /* eslint-disable */
 !(function (e, t) {
+  if(!global.document) return
   "object" == typeof exports && "undefined" != typeof module
     ? (module.exports = t())
     : "function" == typeof define && define.amd
