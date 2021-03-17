@@ -1,0 +1,70 @@
+.set-person {
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #2b88fe;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+.person {
+  margin-top: 16px;
+}
+.main {
+  position: relative;
+  width: 630px;
+  height: 432px;
+  margin: 20px auto;
+}
+.out {
+  position: relative;
+  top: 77px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 135px;
+  overflow: hidden;
+  background-color: #FF9812;
+  border-radius: 40px;
+}
+.list {
+  position: relative;
+  width: 100%;
+}
+
+.toggle {
+  position: absolute;
+  top: 306px;
+  left: 119px;
+  display: block;
+  width: 404px;
+  height: 50px;
+  text-align: center;
+  background-color: #FF9812;
+  line-height: 50px;
+  text-decoration: none ;
+  color:crimson;
+  font-size: 40px;
+  font-weight: 800;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.item {
+  width: 100%;
+  height: 135px;
+  line-height: 135px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 40px;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.item:last-child {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
