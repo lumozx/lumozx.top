@@ -16,8 +16,8 @@ class Random extends React.Component {
       person: [],
     }
   }
-setPerson() {
-    const person = prompt("请输入人员")
+  setPerson() {
+    const person = prompt("请输入人员,英文逗号分隔")
     if (person !== null && person !== "") {
       this.setState(
         {
@@ -33,13 +33,16 @@ setPerson() {
               lottery.draw()
             })
             lottery.on("start", async () => {
-              const res = await axios
-                .get(
+              if (this.state.person === 1) {
+                lottery.setResult([1])
+              } else {
+                const res = await axios.get(
                   `https://www.random.org/integers/?num=1&min=1&max=${this.state.person.length}&col=1&base=10&format=plain&rnd=new`
                 )
                 setTimeout(() => {
                   lottery.setResult([res.data])
                 }, 1000)
+              }
             })
           }
         }
