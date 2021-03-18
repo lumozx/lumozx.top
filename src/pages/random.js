@@ -33,7 +33,7 @@ class Random extends React.Component {
               lottery.draw()
             })
             lottery.on("start", async () => {
-              if (this.state.person === 1) {
+              if (this.state.person.length === 1) {
                 lottery.setResult([1])
               } else {
                 const res = await axios.get(
