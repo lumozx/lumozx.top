@@ -34,14 +34,14 @@ class Random extends React.Component {
             })
             lottery.on("start", async () => {
               if (this.state.person.length === 1) {
-                lottery.setResult([1])
+                lottery.setResult([0])
               } else {
                 const res = await axios.get(
                   `https://www.random.org/integers/?num=1&min=1&max=${this.state.person.length}&col=1&base=10&format=plain&rnd=new`
                 )
                 setTimeout(() => {
-                  lottery.setResult([res.data])
-                }, 1000)
+                  lottery.setResult([res.data - 1])
+                }, 500)
               }
             })
           }
