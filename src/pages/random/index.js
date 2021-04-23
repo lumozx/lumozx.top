@@ -2,10 +2,10 @@ import * as React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import axios from "axios"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
 
-import tiger from "../../static/tiger"
+import tiger from "../../../static/tiger"
 import * as randomStyle from "./random.module.css"
 
 class Random extends React.Component {
@@ -40,7 +40,7 @@ class Random extends React.Component {
                   `https://www.random.org/integers/?num=1&min=1&max=${this.state.person.length}&col=1&base=10&format=plain&rnd=new`
                 )
                 setTimeout(() => {
-                  lottery.setResult([res.data - 1])
+                  lottery.setResult([Number(res.data) - 1])
                 }, 500)
               }
             })
