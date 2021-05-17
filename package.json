@@ -17,7 +17,9 @@
     "gatsby-plugin-manifest": "^3.0.0",
     "gatsby-plugin-offline": "^4.0.0",
     "gatsby-plugin-react-helmet": "^4.0.0",
+    "gatsby-plugin-sass": "^4.5.0",
     "gatsby-plugin-sharp": "^3.0.0",
+    "gatsby-plugin-theme-ui": "^0.8.4",
     "gatsby-remark-copy-linked-files": "^3.0.0",
     "gatsby-remark-images": "^4.0.0",
     "gatsby-remark-prismjs": "^4.0.0",
@@ -30,6 +32,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "sass": "^1.32.13",
+    "theme-ui": "^0.8.4",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
   },

@@ -3,7 +3,7 @@ module.exports = {
     title: `lumozx's blog`,
     author: {
       name: `lumozx`,
-      summary: `i am here`,
+      summary: `I am here`,
     },
     description: `lumozx's blog`,
     siteUrl: `https://www.lumozx.top`,
@@ -12,6 +12,8 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-theme-ui`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

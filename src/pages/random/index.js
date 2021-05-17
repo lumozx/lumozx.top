@@ -6,12 +6,13 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
 import tiger from "../../../static/tiger"
-import * as randomStyle from "./random.module.css"
+import * as randomStyle from "./random.module.scss"
 
 class Random extends React.Component {
   constructor(props) {
     super(props)
     this.setPerson = this.setPerson.bind(this)
+    this.buttonClick = this.buttonClick.bind(this)
     this.state = {
       person: [],
     }
@@ -49,6 +50,11 @@ class Random extends React.Component {
       )
     }
   }
+  buttonClick(e){
+    if(e.keyCode === 13) {
+      this.setPerson()
+    }
+  }
   render() {
     let tigerCom = null
     if (this.state.person.length > 0) {
@@ -76,7 +82,7 @@ class Random extends React.Component {
           return (
             <Layout location={this.props.location} title={siteTitle}>
               <SEO title="老虎机" />
-              <div onClick={this.setPerson} className={randomStyle.setPerson}>
+              <div role = "button" tabIndex="0" onClick={this.setPerson} onKeyDown={this.buttonClick} className={randomStyle.setPerson}>
                 初始化
               </div>
               <div className={randomStyle.person}>

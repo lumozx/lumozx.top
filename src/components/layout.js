@@ -1,7 +1,14 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+import { useColorMode } from 'theme-ui';
+
+
 const Layout = ({ location, title, children }) => {
+  const [colorMode] = useColorMode();
+  const isDark = React.useMemo(() => colorMode === 'dark', [colorMode]);
+  console.log(isDark)
+
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
