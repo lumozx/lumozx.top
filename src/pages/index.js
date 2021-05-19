@@ -14,10 +14,10 @@ const BlogIndex = ({ data }) => {
       <h1 className="index__title">{name}</h1>
       <h2 className="index__summary">{summary}</h2>
       <div className="index__link">
-        <Link className="index__link-item" to="/list">
+        <Link className="index__link-item" to="/list/">
           博客
         </Link>
-        <Link className="index__link-item" to="/random">
+        <Link className="index__link-item" to="/random/">
           老虎机
         </Link>
       </div>
