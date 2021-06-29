@@ -68,9 +68,9 @@ class Random extends React.Component {
           <div className={randomStyle.out}>
             <div className={`${randomStyle.list} list`}>{item}</div>
           </div>
-          <a id="toggle" className={randomStyle.toggle} href="#!">
+          <div id="toggle" className={randomStyle.toggle}>
             开始
-          </a>
+          </div>
         </div>
       )
     }
