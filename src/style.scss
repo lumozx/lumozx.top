@@ -11,6 +11,11 @@
   }
 }
 
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 @keyframes bounce {
   0%,
   20%,
@@ -258,6 +263,9 @@ a:focus {
     margin: 15px 0;
     font-weight: normal;
     font-size: 24px;
+    opacity: 0;      /*实先规定文字的状态是不显示的*/
+    animation: fade-in 4s ease 0s 1;    /*调用名称为fade-in的动画，全程动画显示时间4S，进入方式为ease，延时0S进入，播放次数1次*/
+    animation-fill-mode:forwards;
   }
   &__link{
     margin: 15px 0;
