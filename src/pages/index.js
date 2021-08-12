@@ -3,13 +3,14 @@ import { Link, graphql } from "gatsby"
 
 import SEO from "../components/seo"
 
-import say from '.././../static/say'
+import say from ".././../static/say"
+
+const index = Math.floor(Math.random() * say.length)
 
 const BlogIndex = ({ data }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const name = data.site.siteMetadata?.author?.name || ""
 
-  let index = Math.floor((Math.random()*say.length))
   return (
     <div className="index">
       <SEO title={siteTitle} />
